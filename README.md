@@ -91,34 +91,7 @@ http://localhost:3000
 - **Method**: `GET`
 - **Description**: Returns all recipes from the dataset.
 
-**Response**:
 
-```json
-[
-  {
-    "Name": "Christmas pie",
-    "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
-    "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
-    "Author": "Mary Cadogan",
-    "Ingredients": [
-      "2 tbsp olive oil",
-      "knob butter",
-      "1 onion, finely chopped",
-      "500g sausagemeat or skinned sausages",
-      "grated zest of 1 lemon",
-      "100g fresh white breadcrumbs",
-      "85g ready-to-eat dried apricots, chopped",
-      "50g chestnut, canned or vacuum-packed, chopped",
-      "2 tsp chopped fresh or 1tsp dried thyme",
-      "100g cranberries, fresh or frozen",
-      "500g boneless, skinless chicken breasts",
-      "500g pack ready-made shortcrust pastry",
-      "beaten egg, to glaze"
-    ]
-  },
-  ...
-]
-```
 
 #### 4. Get a Specific Recipe by Index
 
@@ -130,69 +103,18 @@ http://localhost:3000
 
 - `num`: Index of the recipe in the dataset (0-based).
 
-**Response**:
 
-```json
-{
-  "Name": "Christmas pie",
-  "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
-  "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
-  "Author": "Mary Cadogan",
-  "Ingredients": [
-    "2 tbsp olive oil",
-    "knob butter",
-    "1 onion, finely chopped",
-    "500g sausagemeat or skinned sausages",
-    "grated zest of 1 lemon",
-    "100g fresh white breadcrumbs",
-    "85g ready-to-eat dried apricots, chopped",
-    "50g chestnut, canned or vacuum-packed, chopped",
-    "2 tsp chopped fresh or 1tsp dried thyme",
-    "100g cranberries, fresh or frozen",
-    "500g boneless, skinless chicken breasts",
-    "500g pack ready-made shortcrust pastry",
-    "beaten egg, to glaze"
-  ]
-}
-```
 
 #### 5. Get Recipes Containing a Specific Ingredient
 
 - **URL**: `/recipe/contains/:findFood`
+- **Example**: `/recipe/contains/chicken`
 - **Method**: `GET`
 - **Description**: Returns recipes that contain the specified ingredient.
 
 **Request Parameters**:
 
 - `findFood`: Ingredient to search for in the recipes.
-
-**Response**:
-
-```json
-[
-  {
-    "Name": "Christmas pie",
-    "url": "https://www.bbcgoodfood.com/recipes/2793/christmas-pie",
-    "Description": "Combine a few key Christmas flavours here to make a pie that both children and adults will adore",
-    "Author": "Mary Cadogan",
-    "Ingredients": [
-      "2 tbsp olive oil",
-      "knob butter",
-      "1 onion, finely chopped",
-      "500g sausagemeat or skinned sausages",
-      "grated zest of 1 lemon",
-      "100g fresh white breadcrumbs",
-      "85g ready-to-eat dried apricots, chopped",
-      "50g chestnut, canned or vacuum-packed, chopped",
-      "2 tsp chopped fresh or 1tsp dried thyme",
-      "100g cranberries, fresh or frozen",
-      "500g boneless, skinless chicken breasts",
-      "500g pack ready-made shortcrust pastry",
-      "beaten egg, to glaze"
-    ]
-  }
-]
-```
 
 If the `findFood` parameter is not provided, the response will be:
 

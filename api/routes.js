@@ -1,7 +1,7 @@
 const express = require("express");
 const routes = express.Router();
 const data = require("../data/recipes.json")
-console.log(data[0])
+
 // init test route
 routes.get('/', (req, res) => {
     res.json({
