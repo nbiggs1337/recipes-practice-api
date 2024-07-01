@@ -13,8 +13,9 @@ app.use(cors());
 app.use(express.json());
 
 //require routes
-require("./routes.js")(app)
+const routes = require("./routes.js");
 
+app.use("/", routes)
 
 
 module.exports = app;

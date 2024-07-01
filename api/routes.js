@@ -1,9 +1,17 @@
+const express = require("express");
+const routes = express.Router();
 
-const app = require('./app');
 
 // init test route
-app.get('/', (req, res) => {
+routes.get('/', (req, res) => {
     res.json({
       message: '👋🌎🌍🌏',
     });
   });
+
+
+
+
+  
+
+  module.exports = routes
